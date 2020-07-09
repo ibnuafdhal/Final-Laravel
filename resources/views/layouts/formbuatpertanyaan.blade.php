@@ -15,7 +15,7 @@
   </div>
   <div class="form-group">
     <label for="tag">Tag</label>
-    <input type="text" name="tag" class="form-control" id="tag" aria-describedby="emailHelp" placeholder="Tag1, Tag2, Tag3">
+    <input type="text" name="tag" class="form-control " id="tag" aria-describedby="emailHelp" placeholder="Tag1, Tag2, Tag3">
   </div>
   
  
@@ -24,4 +24,14 @@
 @endsection
 
 
+@push('scripts')
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector:'textarea.isi',
+        width: 900,
+        height: 300
+    });
+</script>
+@endpush
 

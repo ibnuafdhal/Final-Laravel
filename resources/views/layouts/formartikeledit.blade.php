@@ -11,7 +11,7 @@
   </div>
   <div class="form-group">
     <label for="isi">ISI Artikel</label>
-    <textarea name="isi" id="isi" class="form-control" cols="30" rows="10">{{$artikel[0]->isi}}</textarea>
+    <textarea name="isi" id="isi" class="isi form-control" cols="30" rows="10">{{$artikel[0]->isi}}</textarea>
   </div>
   <div class="form-group">
     <label for="tag">Tag</label>
@@ -23,5 +23,13 @@
 </form>
 @endsection
 
-
-
+@push('scripts')
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector:'textarea.isi',
+        width: 900,
+        height: 300
+    });
+</script>
+@endpush
